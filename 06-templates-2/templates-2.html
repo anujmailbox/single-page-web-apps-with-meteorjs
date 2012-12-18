@@ -1,0 +1,26 @@
+<head>
+  <title>templates-2</title>
+</head>
+
+<body>
+  {{> book}}
+  {{> list}}
+</body>
+
+<template name="book">
+    <h1> {{title}} </h1>
+    <p> {{author}} </p>
+</template>
+
+<template name="list">
+    <input type="text" id="text" />
+    <ul>
+        {{#each items}}
+        {{> item}}
+        {{/each}}
+    </ul>
+</template>
+
+<template name="item">
+    <li>{{this}}</li>
+</template>
