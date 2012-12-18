@@ -1,0 +1,29 @@
+<head>
+    <title> Templates Lesson </title>
+</head>
+<body>
+    {{> staff}}
+</body>
+
+<template name="staff">
+    <h1> Staff </h1>
+    <p>{{members.length}} Members </p>
+    <ul>
+        {{#each members}}
+            {{> member}}
+        {{/each}}
+    </ul>
+</template>
+
+<template name="member">
+<li>
+    <h2> {{fullname}} </h2>
+    <p> Job: 
+        {{#if executive}} 
+            <strong> {{job}} </strong>
+        {{else}}
+            {{job}}
+        {{/if}}
+     </p>
+</li>
+</template>
