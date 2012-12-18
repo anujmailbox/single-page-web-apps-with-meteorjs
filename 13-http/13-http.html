@@ -1,0 +1,16 @@
+<head>
+  <title>13-http</title>
+</head>
+
+<body>
+  {{> tweetList}}
+</body>
+
+<template name="tweetList">
+<h2> Latest Refresh: {{latestRefresh}} </h2>
+<ul>
+{{#each tweets}}
+<li> <strong> {{user}} </strong> : {{text}} </li>
+{{/each}}
+</ul>
+</template>
